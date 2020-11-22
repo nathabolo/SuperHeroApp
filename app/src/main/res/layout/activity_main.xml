@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/swipeContainer"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".controller.MainActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:orientation="vertical"
+      android:background="@color/colorPrimary"
+      android:layout_height="match_parent"
+      tools:context=".controller.MainActivity">
+
+ <androidx.appcompat.widget.Toolbar
+      android:id="@+id/custom_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/heroes_list"
+        android:textStyle="bold"
+        android:textSize="@dimen/header_size"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        />
+  </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_recyclerview">
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          tools:showIn="@layout/activity_main"
+          android:backgroundTint="#f2f2f2"
+          tools:context=".controller.MainActivity" />
+
+      <TextView
+          android:id="@+id/disconected"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/internet"
+          android:textStyle="bold"
+          android:textSize="@dimen/text_size"/>
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
